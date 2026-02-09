@@ -1,9 +1,9 @@
 :root {
     --bg-color: #f8f9fa;       /* Soft Light Gray */
-    --text-main: #2c3e50;      /* Dark Navy (easier to read than black) */
-    --text-muted: #6c757d;     /* Soft Gray for secondary text */
+    --text-main: #2c3e50;      /* Dark Navy */
+    --text-muted: #6c757d;     /* Soft Gray */
     --accent: #007bff;         /* Trustworthy Blue */
-    --accent-hover: #0056b3;   /* Darker Blue for hover */
+    --accent-hover: #0056b3;   /* Darker Blue */
     --card-bg: #ffffff;        /* Pure White */
     --font-sans: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 }
@@ -13,45 +13,48 @@ body {
     color: var(--text-main);
     font-family: var(--font-sans);
     margin: 0;
-    line-height: 1.8; /* More breathing room for text */
+    line-height: 1.8;
 }
 
-/* Friendly Header */
+/* --- HEADER & BRANDING --- */
 header {
     background: #ffffff;
     border-bottom: 1px solid #e9ecef;
-    padding: 4rem 1rem;
-    text-align: center;
-    box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+    padding: 3rem 1rem;
+    text-align: center; /* Forces everything to center */
 }
 
-h1 {
-    font-size: 3rem;
-    margin: 0;
-    font-weight: 700;
-    color: var(--text-main);
-    letter-spacing: -0.5px;
+.header-content {
+    display: flex;
+    flex-direction: column; /* Stacks Logo on top of Tagline */
+    align-items: center;    /* Centers them horizontally */
+    gap: 1.5rem;            /* Space between Logo and Tagline */
 }
 
-/* The tagline is now a subtitle, not a command prompt */
+/* The "Hero" Logo */
+.brand-logo {
+    max-width: 500px; /* Big and bold */
+    width: 90%;       /* Responsive on mobile */
+    height: auto;
+    display: block;
+}
+
+/* Tagline Subtitle */
 .subtitle {
     font-size: 1.25rem;
     color: var(--text-muted);
-    margin-top: 1rem;
-    font-weight: 400;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
+    font-weight: 500;
+    max-width: 700px;
+    margin: 0 auto; /* Ensures it stays centered */
 }
 
-/* Layout */
+/* --- LAYOUT & GRID --- */
 .container {
     max-width: 1000px;
     margin: 0 auto;
     padding: 2rem;
 }
 
-/* Intro Text */
 .intro-text {
     text-align: center;
     font-size: 1.1rem;
@@ -60,21 +63,24 @@ h1 {
     color: #495057;
 }
 
-/* Grid System */
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem; /* More space between cards */
+    gap: 2rem;
+    align-items: stretch; /* Makes all cards equal height */
 }
 
-/* Modern Cards */
+/* --- CARDS --- */
 .card {
     background: var(--card-bg);
-    border: none; /* No borders, just shadow */
+    border: none;
     padding: 2rem;
-    border-radius: 12px; /* Softer corners */
-    box-shadow: 0 4px 20px rgba(0,0,0,0.05); /* Soft floaty shadow */
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%; 
 }
 
 .card:hover {
@@ -89,12 +95,18 @@ h1 {
     font-weight: 600;
     display: flex;
     align-items: center;
+    margin-bottom: 1rem;
+}
+
+.card p {
+    margin-bottom: 0;
+    flex-grow: 1;
 }
 
 .icon { 
     font-size: 1.8rem; 
     margin-right: 10px; 
-    background: #e7f1ff; /* Light blue circle behind icon */
+    background: #e7f1ff;
     width: 50px;
     height: 50px;
     display: flex;
@@ -103,7 +115,7 @@ h1 {
     border-radius: 50%;
 }
 
-/* Button */
+/* --- CONTACT SECTION --- */
 .contact-section {
     text-align: center;
     margin-top: 5rem;
@@ -120,7 +132,7 @@ h1 {
     padding: 1rem 2.5rem;
     font-size: 1.1rem;
     font-weight: 600;
-    border-radius: 50px; /* Pill shape */
+    border-radius: 50px;
     text-decoration: none;
     transition: all 0.3s ease;
     box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
@@ -133,7 +145,7 @@ h1 {
     color: white;
 }
 
-/* Footer */
+/* --- FOOTER --- */
 footer {
     text-align: center;
     padding: 3rem 1rem;
