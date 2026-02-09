@@ -87,3 +87,23 @@ footer {
 
 a { color: var(--accent); text-decoration: none; }
 a:hover { text-decoration: underline; }
+
+.contact-btn {
+    display: inline-block;
+    background: transparent;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    padding: 1rem 2rem;
+    font-family: var(--font-mono);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.contact-btn:hover {
+    background: var(--accent);
+    color: #000;
+    text-decoration: none;
+    box-shadow: 0 0 15px rgba(0, 255, 65, 0.4);
+}
