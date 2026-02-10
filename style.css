@@ -33,7 +33,7 @@ header {
 
 /* The "Hero" Logo */
 .brand-logo {
-    max-width: 500px; /* Big and bold */
+    max-width: 650px; /* Big and bold */
     width: 90%;       /* Responsive on mobile */
     height: auto;
     display: block;
@@ -66,8 +66,9 @@ header {
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    gap: 6rem;
     align-items: stretch; /* Makes all cards equal height */
+    padding-bottom: 2rem;
 }
 
 /* --- CARDS --- */
