@@ -57,13 +57,37 @@
 
     </div>
 
-    <div class="contact-section">
+    <div class="contact-section" id="contact">
         <h2 style="color: var(--text-main); margin-bottom: 1rem;">Let's simplify your IT.</h2>
-        <p style="color: var(--text-muted); margin-bottom: 2rem;">No confusing jargon. Just reliable solutions.</p>
+        <p style="color: var(--text-muted); margin-bottom: 2rem;">Fill out the details below to request a service consultation.</p>
         
-        <a href="mailto:dosejam@gmail.com?subject=Network%20Security%20Inquiry%20-%20%5BYour%20name%20here%5D" class="contact-btn">
-        Secure Your Network
-        </a>
+        <form action="https://formspree.io/f/mreapdyg" method="POST" class="service-form">
+            
+            <div class="form-row">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="text" name="company" placeholder="Company Name" required>
+            </div>
+            
+            <div class="form-row">
+                <input type="email" name="email" placeholder="Email Address" required>
+                <input type="tel" name="phone" placeholder="Phone Number">
+            </div>
+
+            <select name="service_needed" required>
+                <option value="" disabled selected>Primary Service Needed...</option>
+                <option value="Network Infrastructure">Managed WiFi & Networks</option>
+                <option value="Firewall & Security">Safety & Security</option>
+                <option value="Proactive Monitoring">24/7 System Health</option>
+                <option value="Remote Access / VPN">Remote Access Solutions</option>
+                <option value="Backup & Recovery">Backup & Recovery</option>
+                <option value="Wiring & Cleanup">Wiring & Closet Cleanup</option>
+                <option value="Other / General">Other / General Audit</option>
+            </select>
+
+            <textarea name="message" placeholder="Briefly describe your current setup or the main issue you are facing..." rows="4" required></textarea>
+
+            <button type="submit" class="contact-btn form-submit-btn">Submit Service Request</button>
+        </form>
     </div>
 
 </div>
