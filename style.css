@@ -511,3 +511,59 @@ footer {
     border-top: 1px solid #e9ecef;
     padding-top: 1rem;
 }
+
+/* --- HAMBURGER MENU --- */
+
+/* 1. Hide the background checkbox */
+.menu-checkbox {
+    display: none;
+}
+
+/* 2. Style the hamburger icon (Hidden on large desktops) */
+.menu-icon {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 6px;
+    margin: 1rem auto;
+}
+
+/* 3. Style the 3 lines of the hamburger */
+.menu-icon span {
+    width: 35px;
+    height: 4px;
+    background-color: var(--accent);
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+/* 4. Mobile settings (Triggers on screens smaller than 800px) */
+@media (max-width: 800px) {
+    .menu-icon {
+        display: flex; /* Show the hamburger */
+    }
+
+    .main-nav {
+        display: none; /* Hide the standard links by default */
+        flex-direction: column;
+        width: 100%;
+        gap: 1.5rem;
+        padding-top: 1.5rem;
+    }
+
+    /* 5. When the invisible checkbox is checked (clicked), show the nav */
+    .menu-checkbox:checked ~ .main-nav {
+        display: flex;
+    }
+
+    /* 6. Animate the hamburger into an 'X' when open */
+    .menu-checkbox:checked ~ .menu-icon span:nth-child(1) {
+        transform: translateY(10px) rotate(45deg);
+    }
+    .menu-checkbox:checked ~ .menu-icon span:nth-child(2) {
+        opacity: 0;
+    }
+    .menu-checkbox:checked ~ .menu-icon span:nth-child(3) {
+        transform: translateY(-10px) rotate(-45deg);
+    }
+}
