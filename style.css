@@ -66,10 +66,11 @@ header {
 }
 
 .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 6rem;
-    align-items: stretch; /* Makes all cards equal height */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* This is the magic that centers the bottom row! */
+    gap: 4rem; /* Adjusted slightly for a cleaner look */
+    align-items: stretch;
     padding-bottom: 2rem;
 }
 
@@ -83,7 +84,10 @@ header {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
     flex-direction: column;
-    height: 100%; 
+    
+    /* The sizing magic */
+    flex: 1 1 400px; /* Tells the cards to grow, with a base size of 400px */
+    max-width: 440px; /* Prevents that bottom centered card from stretching way too wide */
 }
 
 .card:hover {
@@ -321,4 +325,189 @@ footer {
     border-top: 1px solid #e9ecef;
     padding-top: 1.5rem;
     text-align: center;
+}
+
+/* --- NAVIGATION --- */
+.main-nav {
+    display: flex;
+    gap: 2rem;
+    margin-top: 1rem;
+    justify-content: center;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.main-nav a:hover, .main-nav a.active {
+    color: var(--accent);
+}
+
+/* --- ABOUT PAGE LAYOUT --- */
+.about-container {
+    display: flex;
+    gap: 4rem;
+    align-items: flex-start;
+    margin-top: 4rem;
+    margin-bottom: 5rem;
+}
+
+.about-image-wrapper {
+    flex: 0 0 350px;
+}
+
+.about-profile-pic {
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h2 {
+    color: var(--text-main);
+    font-size: 2.5rem;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    color: #495057;
+}
+
+.about-actions {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+}
+
+.linkedin-btn {
+    display: inline-block;
+    background-color: transparent;
+    color: #0a66c2; /* Official LinkedIn Blue */
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 50px;
+    text-decoration: none;
+    border: 2px solid #0a66c2;
+    transition: all 0.3s ease;
+}
+
+.linkedin-btn:hover {
+    background-color: #0a66c2;
+    color: white;
+}
+
+/* Make it stack nicely on mobile */
+@media (max-width: 800px) {
+    .about-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 2rem;
+    }
+    
+    .about-actions {
+        flex-direction: column;
+        width: 100%;
+    }
+}
+
+/* --- GALLERY & TESTIMONIALS PAGE --- */
+
+/* The "Under Construction" box styles */
+.coming-soon-block {
+    background-color: #e9ecef;
+    padding: 3rem;
+    text-align: center;
+    border-radius: 12px;
+    color: var(--text-muted);
+    font-style: italic;
+    border: 2px dashed #ced4da;
+    max-width: 800px;
+    margin: 2rem auto 0 auto;
+}
+
+/* Project styles */
+.project-item {
+    max-width: 900px;
+    margin: 0 auto 4rem auto;
+}
+
+.project-image-wrapper {
+    margin-top: 1.5rem;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border: 1px solid #e9ecef;
+}
+
+/* Ensures the image is responsive and doesn't overflow on phones */
+.project-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* --- TESTIMONIALS --- */
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Forces a single-column stack */
+    gap: 2.5rem; /* Adds space between the stacked cards */
+    margin-top: 3rem;
+    max-width: 800px; /* Prevents the cards from getting too wide on big screens */
+    margin-left: auto; /* Centers the stack horizontally */
+    margin-right: auto; /* Centers the stack horizontally */
+}
+
+.testimonial-card {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 2.5rem 2.5rem 2rem 2.5rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.quote-icon {
+    font-size: 5rem;
+    color: var(--accent);
+    opacity: 0.15;
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    line-height: 1;
+    font-family: Georgia, serif;
+    z-index: 0;
+}
+
+.testimonial-card p {
+    position: relative;
+    z-index: 1;
+    font-style: italic;
+    color: #495057;
+    margin-bottom: 1rem;
+    line-height: 1.7;
+}
+
+.testimonial-author {
+    margin-top: auto;
+    font-weight: 700;
+    font-style: normal !important;
+    color: var(--text-main) !important;
+    text-align: right;
+    font-size: 1.1rem;
+    border-top: 1px solid #e9ecef;
+    padding-top: 1rem;
 }
