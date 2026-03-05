@@ -4,57 +4,109 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Services | Rosener Tech Services</title>
+    <link rel="icon" type="image/png" href="icon.png">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<header>
+    <div class="header-content">
+        <a href="index.html" style="display: block; width: 100%; text-align: center; text-decoration: none;">
+            <img src="logo.png" alt="Rosener Tech Services Logo" class="brand-logo" style="margin: 0 auto;">
+        </a>
+        <p class="subtitle">Enterprise-grade IT support, scaled for small business.</p>
+        
+        <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+        
+        <label for="menu-toggle" class="menu-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <nav class="main-nav">
+            <a href="index.html">Home</a>
+            <a href="services.html" class="active">Services</a>
+            <a href="about.html">About</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="index.html#contact">Contact</a>
+        </nav>
+    </div>
+</header>
+
 <div class="container">
-    <div class="intro-text" style="margin-bottom: 3rem;">
+    
+    <div class="intro-text">
         <h1>Managed Service Tiers</h1>
-        <p>Stop reacting to IT disasters. Our managed tiers provide the proactive oversight and professional hardware needed to keep your business running smoothly.</p>
+        <p>Stop reacting to IT disasters. Our managed tiers provide proactive oversight and professional hardware to keep your Chippewa Valley business running smoothly.</p>
     </div>
 
     <div class="grid">
         <div class="card">
-            <h3>Network Essentials</h3>
-            <p class="price-tag">Starting at $99/mo</p>
-            <p>Perfect for businesses with existing gear. We provide 24/7 system health monitoring and monthly reporting to catch failures before they cause downtime.</p>
-            <ul class="tier-features" style="list-style: none; padding: 0; margin-top: 1rem; font-size: 0.9rem;">
-                <li>✓ 24/7 Proactive Monitoring</li>
-                <li>✓ Monthly Health Reports</li>
-                <li><strong>✓ $20/hr Loyalty Labor Rate</strong></li>
+            <h3><span class="icon">🔍</span> Network Essentials</h3>
+            <p><strong>Proactive monitoring for your existing equipment.</strong></p>
+            <p>We provide 24/7 system health oversight and monthly performance reporting to catch hardware bottlenecks and ISP outages before they impact your workday.</p>
+            <ul class="tier-features" style="list-style: none; padding: 0; margin-top: 1.5rem; font-size: 0.95rem;">
+                <li><span style="color: var(--accent);">✓</span> 24/7 Proactive Monitoring</li>
+                <li><span style="color: var(--accent);">✓</span> Monthly Health Reports</li>
+                <li style="margin-top: 10px; font-weight: bold; color: var(--text-main);">⭐ Includes 20% Loyalty Labor Rate ($20/hr)</li>
             </ul>
         </div>
 
-        <div class="card" style="border: 2px solid var(--accent-color);">
-            <h3>Managed Network</h3>
-            <p class="price-tag">Starting at $149/mo</p>
-            <p>Our most popular solution. We provide the <strong>Firewall, Router, Switch, and Access Points</strong> with $0 upfront hardware cost.</p>
-            <ul class="tier-features" style="list-style: none; padding: 0; margin-top: 1rem; font-size: 0.9rem;">
-                <li>✓ Full Network Hardware Included</li>
-                <li>✓ Security & Firmware Management</li>
-                <li><strong>✓ $20/hr Loyalty Labor Rate</strong></li>
+        <div class="card" style="border: 2px solid var(--accent);">
+            <h3><span class="icon">🌐</span> Managed Network</h3>
+            <p><strong>Our Comprehensive Hardware Solution.</strong></p>
+            <p>Stop buying expensive networking gear. We provide, install, and manage the <strong>Firewall, Router, Switch, and Access Points</strong> for you with $0 upfront hardware cost.</p>
+            <ul class="tier-features" style="list-style: none; padding: 0; margin-top: 1.5rem; font-size: 0.95rem;">
+                <li><span style="color: var(--accent);">✓</span> All Network Hardware Included</li>
+                <li><span style="color: var(--accent);">✓</span> Unlimited Remote Network Support</li>
+                <li style="margin-top: 10px; font-weight: bold; color: var(--text-main);">⭐ Includes 20% Loyalty Labor Rate ($20/hr)</li>
             </ul>
         </div>
 
         <div class="card">
-            <h3>Total Office</h3>
-            <p class="price-tag">Custom Quoted</p>
-            <p>Your Virtual IT Department. Complete management of your network plus every employee workstation to ensure total security and reliability.</p>
-            <ul class="tier-features" style="list-style: none; padding: 0; margin-top: 1rem; font-size: 0.9rem;">
-                <li>✓ Full Network + PC Management</li>
-                <li>✓ Priority "First-in-Line" Response</li>
-                <li><strong>✓ $20/hr Loyalty Labor Rate</strong></li>
+            <h3><span class="icon">🏢</span> Total Office</h3>
+            <p><strong>Your Virtual IT Department.</strong></p>
+            <p>The complete solution for growing teams. We manage your entire network plus every employee workstation to ensure security, speed, and reliability across the board.</p>
+            <ul class="tier-features" style="list-style: none; padding: 0; margin-top: 1.5rem; font-size: 0.95rem;">
+                <li><span style="color: var(--accent);">✓</span> Full Fleet Management (Updates & Security)</li>
+                <li><span style="color: var(--accent);">✓</span> Priority "First-in-Line" Response</li>
+                <li style="margin-top: 10px; font-weight: bold; color: var(--text-main);">⭐ Includes 20% Loyalty Labor Rate ($20/hr)</li>
             </ul>
         </div>
     </div>
 
-    <div class="cta-box" style="text-align: center; margin-top: 4rem; padding: 2rem; background: #f9f9f9; border-radius: 8px;">
-        <h3>Ready for a more reliable network?</h3>
-        <p>Contact us today for a free audit and to find the tier that fits your business needs.</p>
-        <a href="index.html#contact" class="contact-btn" style="text-decoration: none; margin-top: 1rem;">Request a Consultation</a>
+    <div class="cta-box" style="text-align: center; margin-top: 4rem; padding: 3rem; background: #ffffff; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); border: 1px solid #e9ecef;">
+        <h2 style="color: var(--text-main);">Which plan is right for you?</h2>
+        <p style="color: var(--text-muted); max-width: 600px; margin: 0 auto 2rem auto;">Because every business has unique infrastructure, we provide custom quotes to ensure you aren't paying for more than you need.</p>
+        <a href="index.html#contact" class="contact-btn" style="text-decoration: none;">Request a Free Consultation</a>
     </div>
+
+    <div class="intro-text" style="margin-top: 5rem;">
+        <h2>One-Time Jobs & Projects</h2>
+        <p>Not ready for a subscription? We are happy to help with specific needs at our standard rate of <strong>$25/hr</strong> ($100 minimum).</p>
+    </div>
+
+    <div class="grid" style="gap: 2rem;">
+        <div class="card" style="flex: 1 1 300px;">
+            <h3>Network "Rescue"</h3>
+            <p>Untangling messy server racks, organizing physical infrastructure, and creating clear documentation.</p>
+        </div>
+        <div class="card" style="flex: 1 1 300px;">
+            <h3>Security Audits</h3>
+            <p>A deep dive into your firewall, VPN, and network settings to identify and close vulnerabilities.</p>
+        </div>
+        <div class="card" style="flex: 1 1 300px;">
+            <h3>Office Setups</h3>
+            <p>Professional installation of ethernet drops, Wi-Fi configuration, and hardware deployment.</p>
+        </div>
+    </div>
+
 </div>
+
+<footer>
+    <p>&copy; 2026 Rosener Tech Services. All rights reserved.</p>
+</footer>
 
 </body>
 </html>
