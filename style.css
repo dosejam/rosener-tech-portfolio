@@ -567,3 +567,47 @@ footer {
         transform: translateY(-10px) rotate(-45deg);
     }
 }
+
+/* --- UPDATED PRICING AD & SERVICES --- */
+
+/* Styles the 'Explore Service Tiers' link to look like your contact button but smaller */
+.ad-card .contact-btn {
+    margin-top: 1rem;
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+}
+
+/* Horizontal rule styling for the Ad card */
+.ad-card hr {
+    border: 0;
+    border-top: 1px solid #eee;
+    margin: 1.5rem 0;
+}
+
+/* For the Services Page: Styling the 'Starting at' text */
+.price-tag {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 1rem;
+    display: block;
+}
+
+/* Feature list inside the service cards */
+.tier-features li {
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Styling for the CTA box on the services page */
+.cta-box {
+    text-align: center;
+    margin-top: 4rem;
+    padding: 3rem;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    border: 1px solid #e9ecef;
+}
