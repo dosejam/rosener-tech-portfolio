@@ -611,3 +611,29 @@ footer {
     box-shadow: 0 4px 20px rgba(0,0,0,0.05);
     border: 1px solid #e9ecef;
 }
+
+/* Specific targeting for the checkbox to keep it inline and blue */
+.service-form input[type="checkbox"] {
+    width: auto !important; 
+    padding: 0 !important; 
+    margin-right: 10px;
+    cursor: pointer;
+    accent-color: var(--accent); /* Sets checkbox color to Trustworthy Blue */
+    transform: scale(1.2); /* Makes it slightly easier to click */
+    vertical-align: middle;
+    box-shadow: none !important;
+}
+
+/* Align the text to sit perfectly next to the checkbox */
+.service-form div:has(#terms) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.service-form label[for="terms"] {
+    cursor: pointer;
+    user-select: none;
+}
